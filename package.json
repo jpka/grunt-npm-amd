@@ -1,0 +1,50 @@
+{
+  "name": "grunt-npm-requirejs",
+  "version": "0.0.1",
+  "description": "Automagically browserify and wire-up installed NPM modules into your RequireJS config",
+  "keywords": [
+    "gruntplugin",
+    "npm",
+    "requirejs",
+    "rjs",
+    "config",
+    "amd"
+  ],
+  "homepage": "https://github.com/jpka/grunt-npm-requirejs",
+  "author": {
+    "name": "Juan Pablo Kaniefsky",
+    "email": "jpkaniefsky@gmail.com"
+  },
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jpka/grunt-npm-requirejs.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "requirejs": "~2.1.6",
+    "npm-amd": ">=0.0.0"
+  },
+  "devDependencies": {
+    "matchdep": "~0.1.1",
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "mocha": "~1.10.0",
+    "chai": "~1.6.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
