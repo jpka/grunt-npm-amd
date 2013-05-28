@@ -29,7 +29,11 @@ module.exports = function (grunt) {
     },
     npm_rjs: {
       standard: {
-        rjsConfig: 'tmp/config.js'
+        rjsConfig: 'tmp/config.js',
+        force: true,
+        browserifyOptions: {
+          insertGlobals: true
+        }
       },
       baseUrl: {
         rjsConfig: 'tmp/baseurl-config.js'
