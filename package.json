@@ -1,7 +1,7 @@
 {
-  "name": "grunt-npm-requirejs",
-  "version": "0.1.1",
-  "description": "Automagically browserify and wire-up installed NPM modules into your RequireJS config",
+  "name": "grunt-npm-amd",
+  "version": "0.0.1",
+  "description": "Automagically browserify and wire-up installed NPM modules into your AMD config",
   "keywords": [
     "gruntplugin",
     "npm",
@@ -24,8 +24,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "requirejs": "~2.1.6",
-    "npm-amd": ">=0.0.0"
+    "npm-amd": "~1.0.0",
+    "config-mancer": "~0.2.1"
   },
   "devDependencies": {
     "matchdep": "~0.1.1",

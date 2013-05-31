@@ -1,25 +1,19 @@
-'use strict';
 var npm_amd = require("npm-amd"),
 chai = require("chai"),
 expect = chai.expect,
 should = chai.should(),
 fs = require("fs"),
 path = require("path"),
-inspectConfig = function(file, cb) {
-  require("requirejs").tools.useLib(function(require) {
-    cb(require("parse").findConfig(fs.readFileSync(file, "utf8")).config);
-  });
-},
+configMancer = require("config-mancer"),
 nodeModules = fs.readdirSync("node_modules").filter(function(name) {
-  if (name === ".bin") return false;
-  return true;
+  return name !== ".bin";
 });
 
-describe("grunt-npm-requirejs", function() {
+describe("grunt-npm-amd", function() {
   var paths;
 
   before(function(done) {
-    inspectConfig("tmp/config.js", function(config) {
+    configMancer.get("tmp/config.js", function(err, config) {
       paths = config.paths;
       done();
     });
@@ -49,7 +43,7 @@ describe("grunt-npm-requirejs", function() {
   });
 
   it("resolves the files from baseUrl when it is specified", function(done) {
-    inspectConfig("tmp/baseurl-config.js", function(config) {
+    configMancer.get("tmp/baseurl-config.js", function(err, config) {
       nodeModules.forEach(function(key) {
         fs.existsSync(path.resolve(config.baseUrl, config.paths[key] + ".js")).should.be.true;
       });

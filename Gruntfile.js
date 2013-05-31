@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -27,16 +26,12 @@ module.exports = function (grunt) {
         }
       }
     },
-    npm_rjs: {
+    npm_amd: {
       standard: {
-        rjsConfig: 'tmp/config.js',
-        force: true,
-        browserifyOptions: {
-          insertGlobals: true
-        }
+        config: 'tmp/config.js'
       },
-      baseUrl: {
-        rjsConfig: 'tmp/baseurl-config.js'
+      standardWithBaseUrl: {
+        config: 'tmp/baseurl-config.js'
       }
     }
   });
@@ -51,7 +46,7 @@ module.exports = function (grunt) {
                      'clean',
                      'mkdir:tmp',
                      'copy',
-                     'npm_rjs',
+                     'npm_amd',
                      'mocha',
                      'clean'
   ]);
