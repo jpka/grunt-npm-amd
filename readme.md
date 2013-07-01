@@ -29,7 +29,7 @@ grunt.initConfig({
 	}
 });
 
-grunt.loadNpmTasks('grunt-npm-requirejs');
+grunt.loadNpmTasks('grunt-npm-amd');
 
 grunt.registerTask('default', ['npm_amd']);
 ```

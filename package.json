@@ -10,7 +10,7 @@
     "config",
     "amd"
   ],
-  "homepage": "https://github.com/jpka/grunt-npm-requirejs",
+  "homepage": "https://github.com/jpka/grunt-npm-amd",
   "author": {
     "name": "Juan Pablo Kaniefsky",
     "email": "jpkaniefsky@gmail.com"
@@ -18,7 +18,7 @@
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jpka/grunt-npm-requirejs.git"
+    "url": "git://github.com/jpka/grunt-npm-amd.git"
   },
   "scripts": {
     "test": "grunt test"
